@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'lato';
+    font-weight: 300;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'lato';
+    font-weight: 600;
+    src: url('../fonts/Lato-Bold.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+}
+
+.d-flex {
+    display: flex;
+}
+
+nav {
+    height: 60px;
+    background-color: #E0E0E0;
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: none;
+}
+
+.navtext {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.tipodetransacao,
+.mercadoria,
+.valor,
+.botao {
+    flex-direction: column;
+    padding: 5px;
+}
+
+.btnSubmit {
+    height: 32px;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btnSubmit:hover {
+    cursor: pointer;
+}
+
+.label {
+    font-weight: 300;
+    color: #333333;
+}
+
+.formularioLabel {
+    padding-bottom: 5px;
+}
+
+.selectInput,
+.textInput {
+    color: #888888;
+    padding: 5px;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    border-color: #979797;
+}
+
+.transacao,
+.extrato {
+    padding-top: 20px;
+}
+
+.hr-linha {
+    color: #979797;
+    margin: 5px;
+}
+
+.hr-linhaDupla {
+    color: #979797;
+    margin: 5px;
+    border-top: 1px solid;
+    padding: 1px;
+    border-bottom: 1px solid;
+    border-left: none;
+    border-right: none;
+}
+
+.textoTabela {
+    font-weight: 300;
+    color: #333333;
+    font-size: 14px;
+}
+
+.tabelaColunas p {
+    font-weight: 600;
+}
+
+.tabelaColunas, .tabelaLinha{
+    border-bottom: 1px solid #979797;
+    padding: 10px;
+}
+
+.extrato > div:last-child{
+    border-top: 1px solid #979797;
+    margin-top: 2px;
+    padding-top: 5px;
+}
+
+.titulo {
+    justify-content: center;
+    font-weight: 600;
+    color: #333333;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.colunaMercadoria,
+.linhaMercadoria,
+.linhaTotal {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.linha {
+    width: 100%;
+}
+
+.colunaValor,
+.linhaValor,
+.linhaTotalValor {
+    width: 30%;
+}
+
+p.acaoTransacao {
+    padding-left: 5px;
+}
+
+.linhaTotalValor,
+.linhaTotal {
+    font-weight: 600;
+    color: #333333;
+}
+
+.total {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.linhaTotalValor {
+    width: 100%;
+}
+
+.lucro {
+    font-weight: 300;
+    color: #333333;
+    font-size: 14px;
+}
+
+.footer {
+    width: 100%;
+    height: 10px;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Side navbar mobile*/
+#fecharNavbar {
+    display: none;
+}
+
+.novaTransacao {
+    display: none;
+}
+
+    #fecharNavbar {
+        display: flex;
+    }
+    .menu{
+        width: 0;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: #333333;
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column; 
+        padding-top: 20px;
+    }
+    .openMenu{
+        width: 250px;
+    }
+    a.opcao{
+        text-decoration: none;
+        width: 100%;
+        color: #FFFFFF;
+        padding: 10px;
+        margin-right: 20px;
+        text-align: end;
+        white-space: nowrap;
+    }
+    a.opcao:first-of-type{
+        text-align: start;
+        color: red;
+        margin: 0;
+        margin-left: 50px;
+    }
+    img.opcao{
+        display: flex;
+    }
+
+    a.opcao img{
+        width: 20px;
+    }
+    a.opcao:not(:first-of-type):hover{
+        background-color: #FFFFFF;
+        color: #333333;
+    }
+
+@media only screen and (min-width: 768px) {
+    .novaTransacao {
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .label{
+        font-size: 14px;
+    }
+    .transacaoForm {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+    .transacao {
+        border: 1px solid #979797;
+        margin: 20px;
+        border-radius: 5px;
+    }
+    .transacaoForm {
+        padding: 20px;
+        justify-content: end;
+    }
+    .tipodetransacao,
+    .mercadoria,
+    .valor,
+    .botao {
+        width: 18%;
+        padding: 0.5%;
+    }
+    .mercadoria {
+        width: 60%;
+    }
+    .botao {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    .menu{
+        width: unset;
+        position: static;
+        height: unset;
+        background-color: #FFFFFF;
+        color: #333333;
+        display: flex;
+        flex-direction: row; 
+        padding: 0;
+        margin: 0;
+        transition: unset;
+    }
+
+    .menu a{
+        padding: 0;
+        margin: 0;
+        background-color: #FFFFFF;
+        text-decoration: none;
+        color: #333333;
+        text-align: unset;
+    }
+    a.opcao{
+        width: unset;
+        padding: 10px;
+    }
+    a.opcao:not(:first-of-type):hover {
+        background-color: #333333;
+        color: #FFFFFF;
+    }
+    .hr-linha{
+        display: none;
+    }
+    .transacao{
+        float: left;
+        width: 40%
+    }
+    .novaTransacao {
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    /*navbar*/
+    ul{
+        justify-content: unset;
+    }
+    ul li:last-of-type{
+        margin-left: auto
+    }
+
+    .navtext, .logo{
+        padding-left: 20px;
+    }
+
+    #mobile-menu, #fecharNavbar{
+        display: none;
+    }
+    /*section formulario transação*/
+    .transacaoForm{
+        flex-direction: column;
+    }
+
+    .tipodetransacao,
+    .mercadoria,
+    .valor,
+    .botao {
+        width: unset;
+    }
+
+    /*section extrato*/
+    .extrato{
+        padding: 20px;
+    }
+
+    .transacao, .extrato{
+        margin: 50px;
+    }
+    .selectInput, .textInput{
+        padding: 10px;
+    }
+    .btnSubmit{
+        height: 50px
+    }
+
+    .titulo{
+        font-size: 32px
+    }
+
+    ul{
+        padding: 0px 200px;
+    }
+
+    .label, .textoTabela, .btnSubmit, .selectInput, .textInput::placeholder{
+        font-size: 24px;
+    }
+}
