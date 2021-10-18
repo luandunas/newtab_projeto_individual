@@ -363,15 +363,20 @@ p.acaoTransacao {
     .transacao, .extrato{
         margin: 50px;
     }
+    .transacaoForm div{
+        padding-bottom: 30px;
+    }
     .selectInput, .textInput{
-        padding: 10px;
+        padding: unset;
+        padding-left: 5px;
+        height: 32px;
     }
     .btnSubmit{
-        height: 50px
+        height: 30px;
     }
 
     .titulo{
-        font-size: 32px
+        font-size: 20px;
     }
 
     ul{
@@ -379,6 +384,6 @@ p.acaoTransacao {
     }
 
     .label, .textoTabela, .btnSubmit, .selectInput, .textInput::placeholder{
-        font-size: 24px;
+        font-size: 16px;
     }
 }
