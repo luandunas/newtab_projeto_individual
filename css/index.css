@@ -49,6 +49,11 @@ li {
     font-size: 20px;
 }
 
+.header{
+    position: sticky;
+    top: 0;
+}
+
 .tipodetransacao,
 .mercadoria,
 .valor,
@@ -92,6 +97,16 @@ li {
 .transacao,
 .extrato {
     padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.transacao{
+    height: 100%;
 }
 
 .hr-linha {
@@ -182,10 +197,13 @@ p.acaoTransacao {
 }
 
 .footer {
+    clear: both;
+    position: fixed;
+    bottom: 0;
     width: 100%;
     height: 10px;
     background-color: #333333;
-    clear: both;
+    margin-top: 10px;
 }
 
 
@@ -198,53 +216,56 @@ p.acaoTransacao {
     display: none;
 }
 
-    #fecharNavbar {
-        display: flex;
-    }
-    .menu{
-        width: 0;
-        position: fixed;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        background-color: #333333;
-        overflow-x: hidden;
-        transition: 0.5s;
-        display: flex;
-        flex-direction: column; 
-        padding-top: 20px;
-    }
-    .openMenu{
-        width: 250px;
-    }
-    a.opcao{
-        text-decoration: none;
-        width: 100%;
-        color: #FFFFFF;
-        padding: 10px;
-        margin-right: 20px;
-        text-align: end;
-        white-space: nowrap;
-    }
-    a.opcao:first-of-type{
-        text-align: start;
-        color: red;
-        margin: 0;
-        margin-left: 50px;
-    }
-    img.opcao{
-        display: flex;
-    }
+#fecharNavbar {
+    display: flex;
+}
+.menu{
+    width: 0;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #333333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column; 
+    padding-top: 20px;
+}
+.openMenu{
+    width: 250px;
+}
+a.opcao{
+    text-decoration: none;
+    width: 100%;
+    color: #FFFFFF;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: end;
+    white-space: nowrap;
+}
+a.opcao:first-of-type{
+    text-align: start;
+    color: red;
+    margin: 0;
+    margin-left: 50px;
+}
+img.opcao{
+    display: flex;
+}
 
-    a.opcao img{
-        width: 20px;
-    }
-    a.opcao:not(:first-of-type):hover{
-        background-color: #FFFFFF;
-        color: #333333;
-    }
+a.opcao img{
+    width: 20px;
+}
+a.opcao:not(:first-of-type):hover{
+    background-color: #FFFFFF;
+    color: #333333;
+}
 
 @media only screen and (min-width: 768px) {
+    main{
+        flex-direction: column;
+    }
     .novaTransacao {
         display: flex;
         justify-content: center;
@@ -286,7 +307,7 @@ p.acaoTransacao {
 @media only screen and (min-width: 1100px){
     .menu{
         width: unset;
-        position: static;
+        position: sticky;
         height: unset;
         background-color: #FFFFFF;
         color: #333333;
@@ -321,14 +342,16 @@ p.acaoTransacao {
         border: 1px solid #979797;
         margin: 40px;
         border-radius: 5px;
-        top: 10px;
+        top: 70px;
         position: sticky;
-        float: left;
+    }
+
+    main{
+        flex-direction: row;
     }
 
     .extrato{
         width: 50%;
-        float: left;
     }
     .novaTransacao {
         display: flex;
