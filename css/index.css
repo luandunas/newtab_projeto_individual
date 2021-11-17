@@ -114,16 +114,6 @@ main{
     margin: 5px;
 }
 
-.hr-linhaDupla {
-    color: #979797;
-    margin: 5px;
-    border-top: 1px solid;
-    padding: 1px;
-    border-bottom: 1px solid;
-    border-left: none;
-    border-right: none;
-}
-
 .textoTabela {
     font-weight: 300;
     color: #333333;
@@ -139,7 +129,7 @@ main{
     padding: 10px;
 }
 
-.extrato > div:last-child{
+.tabelaLinhaTotal{
     border-top: 1px solid #979797;
     margin-top: 2px;
     padding-top: 5px;
