@@ -53,8 +53,6 @@ async function drawTable(){
 			total += transactions[item].transCurrency;
 		}
 
-		console.log(total);
-
 		document.getElementById("todasTransacoes").innerHTML += 
 		`<div class="d-flex tabelaLinha">
 		<div class="linha d-flex">
