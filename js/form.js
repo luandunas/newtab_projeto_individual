@@ -1,7 +1,8 @@
 const letterPattern = /[^0-9]/;
 
 function formatMoney(e){
-	if(letterPattern.test(e.key)){
+	if(e.data == null) return;
+	if(letterPattern.test(e.data)){
 		//console.log(e.key)
 		e.preventDefault();
 		return;
