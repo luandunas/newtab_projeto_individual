@@ -21,12 +21,14 @@ const formatter = new Intl.NumberFormat('pt-BR', {
 var transactions = localStorage.getItem("transactions") ? JSON.parse(localStorage.getItem("transactions")) : [];
 
 function focusForm(){
+	fecharSideNav();
 	document.getElementsByName("nomeMercadoria")[0].focus();
 }
 
 function clearTransaction(){
 	let userConfirm = confirm("Deseja remover todas as transações?");
 	if(userConfirm){
+		fecharSideNav();
 		localStorage.removeItem("transactions");
 		transactions = [];
 		drawTable();
