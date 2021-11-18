@@ -21,7 +21,7 @@ const formatter = new Intl.NumberFormat('pt-BR', {
 var transactions = localStorage.getItem("transactions") ? JSON.parse(localStorage.getItem("transactions")) : [];
 
 function focusForm(){
-	fecharSideNav();
+	fecharSideNav()
 	document.getElementsByName("nomeMercadoria")[0].focus();
 }
 
