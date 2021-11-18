@@ -25,9 +25,12 @@ function focusForm(){
 }
 
 function clearTransaction(){
-	localStorage.removeItem("transactions");
-	transactions = [];
-	drawTable();
+	let userConfirm = confirm("Deseja remover todas as transações?");
+	if(userConfirm){
+		localStorage.removeItem("transactions");
+		transactions = [];
+		drawTable();
+	}
 }
 
 async function drawTable(){
