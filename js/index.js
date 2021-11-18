@@ -92,17 +92,19 @@ function subimitForm(e){
 	transactionName = document.querySelector('input[name="nomeMercadoria"]');
 	transactionType = document.querySelector('select[name="acaoMercadoria"]');
 
-	currencyNumber = parseInt(transactionCurrency.value.replace(/[^0-9]/g, ""));
-
 	if(!transactionName.value){
 		transactionName.focus();
 		return;
 	}
 
-	if(!transactionCurrency.value){
+	console.log(!transactionCurrency.value && transactionCurrency.value.replace(/[^0-9]/g, "") == "")
+
+	if(transactionCurrency.value.replace(/[^0-9]/g, "") == ""){
 		transactionCurrency.focus();
 		return;
 	}
+
+	currencyNumber = parseInt(transactionCurrency.value.replace(/[^0-9]/g, ""));
 
 	transactions.push({
 		transType: transactionType.value,
