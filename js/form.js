@@ -10,11 +10,11 @@ function formatMoney(e){
 
 	valor = e.target.value.toString();
 	valor = valor.replace(/[\D]+/g, '');
-	valor = valor.replace(/([0-9]{2})$/g, ",$1");
+	valor = valor.replace(/([0-9]{1})$/g, ",$1");
 
 	if(valor.length >= 6){
 		while(/([0-9]{4})[,|\.]/g.test(valor)){
-			valor = valor.replace(/([0-9]{2})$/g, ",$1");
+			valor = valor.replace(/([0-9]{1})$/g, ",$1");
 			valor = valor.replace(/([0-9]{3})[,|\.]/g, ".$1");
 		}
 	}
